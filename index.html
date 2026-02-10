@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Father's Day | For Dad</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Playfair+Display:ital,wght@0,700;1,400&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+            background: #0f2027;
+            background: linear-gradient(to bottom, #2c5364, #203a43, #0f2027);
+            color: white;
+        }
+
+        section {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        /* Brilliant Background Elements */
+        .bg-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            z-index: -1;
+            filter: blur(50px);
+        }
+
+        /* Glassmorphism Card */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+            max-width: 600px;
+        }
+
+        .photo-frame {
+            width: 300px;
+            height: 400px;
+            border: 10px solid white;
+            border-bottom: 50px solid white;
+            box-shadow: 0 15px 25px rgba(0,0,0,0.5);
+            transform: rotate(-3deg);
+            margin-bottom: 20px;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+
+        .photo-frame:hover { transform: rotate(0deg) scale(1.05); }
+
+        h1 { font-family: 'Dancing Script', cursive; font-size: 4rem; color: #ffd700; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
+        h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 15px; }
+        p { font-style: italic; font-size: 1.2rem; line-height: 1.6; }
+
+        .scroll-down {
+            position: absolute;
+            bottom: 20px;
+            animation: bounce 2s infinite;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(-10px);}
+            60% {transform: translateY(-5px);}
+        }
+
+        .btn-music {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+            background: rgba(255,255,255,0.2);
+            border: none;
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <button class="btn-music" onclick="toggleMusic()">🎵</button>
+    <audio id="bgMusic" loop>
+        <source src="https://www.bensound.com/bensound-music/bensound-memories.mp3" type="audio/mpeg">
+    </audio>
+
+    <section>
+        <div class="bg-circle" style="width: 400px; height: 400px; top: 10%; left: -10%;"></div>
+        <div data-aos="zoom-in">
+            <h1>Happy Father's Day</h1>
+            <p style="margin-top: 20px;">A Hero, A Guide, A Friend.</p>
+        </div>
+        <div class="scroll-down">Scroll to open my heart ↓</div>
+    </section>
+
+    <section>
+        <div class="bg-circle" style="width: 300px; height: 300px; bottom: 10%; right: -5%; background: rgba(255, 215, 0, 0.05);"></div>
+        <div class="glass-card" data-aos="fade-up">
+            <img src="Screenshot_2026-02-10-14-52-58-750_com.zhiliaoapp.musically-edit.jpg" alt="Memory 1" class="photo-frame">
+            <h2>The Foundation</h2>
+            <p>"Thank you for holding my hand when I took my first steps and for showing me the way ever since."</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="glass-card" data-aos="fade-right">
+            <img src="Screenshot_2026-02-10-14-52-58-750_com.zhiliaoapp.musically-edit.jpg" alt="Memory 2" class="photo-frame" style="transform: rotate(3deg);">
+            <h2>My Inspiration</h2>
+            <p>"Every dream I have today is built on the sacrifices you made yesterday. I am because you are."</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="bg-circle" style="width: 500px; height: 500px; top: 20%; background: rgba(255, 255, 255, 0.1);"></div>
+        <div data-aos="flip-up" style="max-width: 800px;">
+            <h1 style="font-size: 5rem;">I Love You, Dad</h1>
+            <p style="font-size: 1.5rem; margin: 30px 0;">You are the greatest gift life has ever given me.</p>
+            <div style="font-family: 'Dancing Script'; font-size: 2rem; color: #ffd700;">
+                - Always your little one, Yuni
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1200 });
+
+        function toggleMusic() {
+            var audio = document.getElementById("bgMusic");
+            return audio.paused ? audio.play() : audio.pause();
+        }
+    </script>
+</body>
+</html>
